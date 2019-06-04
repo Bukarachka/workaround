@@ -1,0 +1,14 @@
+﻿@model IEnumerable<WorkAround.Data.Entities.Post>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="btn">
+        <a asp-area="" asp-controller="Post" asp-action="Create">Create Post</a>
+    </div>
+    @foreach (var post in Model)
+    {
+        <partial name="_MyPost" model="post" />
+    }
+</div>
